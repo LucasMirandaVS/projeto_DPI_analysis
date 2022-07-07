@@ -4,29 +4,28 @@ library(readr)
 # Importando os dados
 data <- read_csv("C:/Users/Lucas/Desktop/projeto/DPI2020.csv")
 
-# Definido o escopo da an·lise: filtrando os paÌses e o perÌodo
+# Definido o escopo da an√°lise: filtrando as vai√°veis e lidando com os NA's
 df <- data %>%
   arrange(countryname)
   
 df <- df[, c('countryname', 'system', 'yrsoffc', 'finittrm',
              'execrlc','execrel', 'reelect', 'prtyin', 'year')] %>%
   rename('Anos de governo' = 'yrsoffc',
-         'Religi„o' = 'execrel',
+         'Religi√£o' = 'execrel',
          'Ideologia' = 'execrlc',
-         'ReeleiÁ„o' = 'reelect',
-         'PaÌs' = 'countryname',
+         'Reelei√ß√£o' = 'reelect',
+         'Pa√≠s' = 'countryname',
          'Ano' = 'year',
          'Mandato finito' = 'finittrm',
          'Regime' = 'system',
          'Anos do partido' = 'prtyin') %>%
-  mutate(PaÌs = recode(PaÌs, "FRG/Germany" = "Germany")) %>%
+  mutate(Pa√≠s = recode(Pa√≠s, "FRG/Germany" = "Germany")) %>%
   dplyr :: na_if(-999) %>%
   dplyr :: na_if('')
 
 summary(df)
 
-# Definindo as vari·veis categÛricas e lidando com os NA's
-# Atribuindo nomes as categorias
+# Definindo as vari√°veis categ√≥ricas 
 df$Regime <- factor(df$Regime,
                     levels = c('Presidential',
                                'Assembly-Elected President',
@@ -37,31 +36,31 @@ df$Regime <- factor(df$Regime,
 
 df$`Mandato finito` <- factor(df$`Mandato finito`,
                               levels = c(0, 1),
-                              labels = c('N„o', 'Sim'))
+                              labels = c('N√£o', 'Sim'))
 
-df$ReeleiÁ„o <- factor(df$ReeleiÁ„o,
+df$Reelei√ß√£o <- factor(df$Reelei√ß√£o,
                        levels = c(0,1),
-                       labels = c('N„o', 'Sim'))
+                       labels = c('N√£o', 'Sim'))
 
 df$Ideologia <- factor(df$Ideologia,
                        levels = c(0,
                                   'Right',
                                   'Center',
                                   'Left'),
-                       labels = c('Sem informaÁ„o',
+                       labels = c('Sem informa√ß√£o',
                                   'Direita',
                                   'Centro',
                                   'Esquerda'))
-df$Religi„o <- factor(df$Religi„o,
+df$Religi√£o <- factor(df$Religi√£o,
                       levels = c(0,
                                  'Christian',
                                  'Catholic',
                                  'Islamic',
                                  'Hindu'),
                       labels = c('Outro',
-                                 'Crist„o',
-                                 'CatÛlico',
-                                 'Isl„',
+                                 'Crist√£o',
+                                 'Cat√≥lico',
+                                 'Isl√£',
                                  'Hindu'))
 
 
