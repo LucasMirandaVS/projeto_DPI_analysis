@@ -4,12 +4,12 @@ library(readr)
 # Importando os dados
 data <- read_csv("C:/Users/Lucas/Desktop/projeto/DPI2020.csv")
 
-# Definido o escopo da análise: filtrando as vaiáveis e lidando com os NA's
+# Definido o escopo da análise: filtrando os países e o período
 df <- data %>%
   arrange(countryname)
   
-df <- df[, c('countryname', 'system', 'yrsoffc', 'finittrm',
-             'execrlc','execrel', 'reelect', 'prtyin', 'year')] %>%
+df <- df[, c('year', 'countryname', 'system', 'yrsoffc', 'finittrm',
+             'execrlc','execrel', 'reelect', 'prtyin', 'numopp')] %>%
   rename('Anos de governo' = 'yrsoffc',
          'Religião' = 'execrel',
          'Ideologia' = 'execrlc',
@@ -18,14 +18,16 @@ df <- df[, c('countryname', 'system', 'yrsoffc', 'finittrm',
          'Ano' = 'year',
          'Mandato finito' = 'finittrm',
          'Regime' = 'system',
-         'Anos do partido' = 'prtyin') %>%
-  mutate(País = recode(País, "FRG/Germany" = "Germany")) %>%
+         'Anos do partido' = 'prtyin',
+         'Oposição' = 'numopp') %>%
+  mutate(País = recode(País, "FRG/Germany" = "Germany",
+                       "Soviet Union" = 'Russia',
+                       'Macedonia' = 'North Macedonia')) %>%
   dplyr :: na_if(-999) %>%
   dplyr :: na_if('')
 
-summary(df)
-
-# Definindo as variáveis categóricas 
+# Definindo as variáveis categóricas e lidando com os NA's
+# Atribuindo nomes as categorias
 df$Regime <- factor(df$Regime,
                     levels = c('Presidential',
                                'Assembly-Elected President',
@@ -62,5 +64,3 @@ df$Religião <- factor(df$Religião,
                                  'Católico',
                                  'Islã',
                                  'Hindu'))
-
-
