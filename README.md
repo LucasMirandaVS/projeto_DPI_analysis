@@ -1,5 +1,5 @@
 # Investigando a relação entre política e religão
-Consultando a base de dados do Banco Inter Americano do ano de 2020(DPI2020 Database of Political Institutions) sobre partidos políticos do mundo, agrupei os países por região geográfica e investiguei as possíveis relações entre a duração dos mandatos dos governantes e sua inclinação política, sua ideologia e características dos governos como tipo de sistema implementado, se o governante pode se reeleger ou não. As informações sobre os critérios para formulação das variáveis pode ser encontrada no endereço na parte de refeências.
+Consultando a base de dados do Banco Inter Americano do ano de 2020(DPI2020 Database of Political Institutions) sobre partidos políticos do mundo, agrupei os países por região geográfica e investiguei as possíveis relações entre a duração dos mandatos dos governantes e sua inclinação política, sua ideologia e características dos governos como tipo de sistema implementado, se o governante pode se reeleger ou não. As informações sobre os critérios para formulação das variáveis pode ser encontrada no endereço na parte de refeências. As análises de cada região estão nos arquivos Jupyter Notebook.
 
 Pacotes Utilizados: tidyverse, psych, cowplot, ggplot2.
 
