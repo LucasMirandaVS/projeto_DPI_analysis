@@ -1,4 +1,4 @@
-# Investigando a relação entre política e religão
+# Visualização de Dados Géopolíticos
 
 #### Motivação, Dados utilizados e ferramentas implementadas
  O departamento de pesquisa do Banco Inter Americano divulgou em 2020 a versão atualizada de sua base de dados com informações sobre todos os países das Nações Unidas(DPI2020 Database of Political Institutions). Tendo em vista a disponibilidade de dados confiáveis sobre a maioria dos países do mundo e com grande variedade, decidi agrupar os países por região geográfica e investiguar as possíveis relações entre a duração dos mandatos dos governantes e sua inclinação política, sua ideologia e características dos governos como tipo de sistema implementado, se o governante pode se reeleger ou não. 
