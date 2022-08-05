@@ -75,7 +75,7 @@ Outro ponto notável dessa amostra é que há uma quantidade considerável de go
 ![image](https://user-images.githubusercontent.com/77032413/182042555-7c2cabb8-63d0-4539-a4a6-d5dad5f9ee5d.png) ![image](https://user-images.githubusercontent.com/77032413/182973108-d80a8ff5-fd1b-4105-a5c0-b4f66d149ec1.png)
 
 
-#### Conclusão
+### Conclusão
 Como esperado, as análises mostraram que as durações dos governos podem ser atribuídas à diferentes fatores nas diferentes regiões do mundo. Não há um fator comum à todas as regiões que parece ser determinante na duração dos governos. Em algumas delas a ideologia pareceu estar relacionada a duração dos mandatos, em outras regiões a durações dos governos estavam mais relacionadas à aspectos constitucionais e religiosos. 
 
 As durações dos mandatos dos governantes parecem estar associadas à uma série de fatores, alguns deles não estão incluídos nos dados dispinibilizados pelos pesquisadores do Banco Interamericano, outros não podem ser facilmente quantificados para este tipo de análise. Entretanto, fica a sugestão de inclusão de outras variáveis para a amostra, a fim de averiguar se estes resultados persistem. Finalmente, as análises completas de cada região, junto com o código estão nos arquivos Jupyter Notebook. 
